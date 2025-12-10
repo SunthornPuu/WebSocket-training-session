@@ -1,0 +1,39 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loginPage" style="display: flex">
+        <h1>Login</h1>
+        <input type="text" id="username">
+        <button id="login" onclick="login()">Login</button>
+        <p id="status" style="display: none; color: red">This username is already taken</p>
+    </div>
+    <div id="chatPage" style="display: none">
+        <div id="headerBar">
+            <h1>Chat</h1>
+            <button id="showUserList" onclick="showUserList()">users</button>
+        </div>
+        <div id="midBar">
+            <div id="userList" style="display: none">
+                <button id="closeUserList" onclick="hideUserList()">X</button>
+                <div id="userListContent"></div>
+            </div>
+            <div id="messages"></div>
+        </div>
+        <div id="bottomBar">
+            <input type="text" id="message">
+            <button id="send" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
